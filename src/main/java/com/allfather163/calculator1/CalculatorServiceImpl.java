@@ -1,32 +1,18 @@
 package com.allfather163.calculator1;
 
+public interface CalculatorServiceImpl {
+    String hello ();
 
-import org.springframework.stereotype.Service;
+    String plus(int num1, int num2);
 
-public class CalculatorServiceImpl implements com.allfather163.calculator1.service.CalculatorService, CalculatorServiceImplz {
-    @Override
-    public String hello() {
-        return "Добро пожаловать в калькулятор";
-    }
-    @Override
-    public String plus(int num1, int num2) {
-        int result = num1 + num2;
-        return num1 + " + " + num2 + " = " + result;
-    }
-    @Override
-    public String minus(int num1, int num2) {
-        int result = num1 - num2;
-        return num1 + " - " + num2 + " = " + result;
-    }
-    @Override
-    public String divide(int num1, int num2) {
-        double result = (double) num1 / num2;
-        return num1 + " / " + num2 + " = " + result;
+    String minus(int num1, int num2);
+
+    String divide(int num1, int num2);
+
+
+    default String multiply() {
+        return multiply(0, 0);
     }
 
-    @Override
-    public String multiply(int num1, int num2) {
-        int result = num1 * num2;
-        return num1 + " * " + num2 + " = " + result;
-    }
+    String multiply(int num1, int num2);
 }

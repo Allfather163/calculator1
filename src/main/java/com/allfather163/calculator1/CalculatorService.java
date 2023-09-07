@@ -1,8 +1,6 @@
 package com.allfather163.calculator1;
 
-import org.springframework.stereotype.Service;
 
-@Service
 public interface  CalculatorService {
     String hello();
 
