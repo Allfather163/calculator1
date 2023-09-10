@@ -10,9 +10,5 @@ public interface CalculatorServiceImpl {
     String divide(int num1, int num2);
 
 
-    default String multiply() {
-        return multiply(0, 0);
-    }
-
     String multiply(int num1, int num2);
 }
